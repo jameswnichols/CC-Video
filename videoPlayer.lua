@@ -31,7 +31,7 @@ for y = 0, monitorHeight do
 
     local backgroundString = string.sub(imageData, stringSegmentStart, stringSegmentEnd)
     local foregroundString = string.sub(imageDataSharpened, stringSegmentStart, stringSegmentEnd)
-    print(string.len(backgroundString))
+    print(tostring(stringSegmentStart) .. " : " .. tostring(stringSegmentEnd))
     monitor.setCursorPos(1, y)
     monitor.blit(monitorRenderString, foregroundString, backgroundString)
     
